@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs')%>
+</head>
+
+<body>
+    <%- include('../partials/navbar.ejs')%>
+    <section id="info" class="d-flex align-item-center justify-content-center">
+        <div class="container">
+            <div class="page-header">
+                <h1>Документы</h1>
+            </div>
+            <div>
+                <% for (const folderName in docs) { %>
+                    <h2><%= folderName %></h2>
+                    <ul>
+                      <% for (const fileName of docs[folderName]) { %>
+                        <li>
+                          <a href="/documents/<%= folderName %>/<%= fileName %>">
+                            <%= fileName %>
+                          </a>
+                        </li>
+                      <% } %>
+                    </ul>
+                  <% } %>
+
+        </div>
+        </div>
+    </section>
+    <%- include('../partials/footer.ejs')%>
+</body>
+
+</html>

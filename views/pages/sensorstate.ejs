@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs')%>
+</head>
+
+<body>
+    <%- include('../partials/navbar.ejs')%>
+    <section id="info" class="d-flex align-item-center justify-content-center">
+        <div class="container">
+            <div class="page-header">
+    <h1>Температура в помещениях</h1>
+        <ul>
+            <li>Помещение 1: <%= sensorstate['sensor.temperature_01'] %> градусов</li>
+            <li>Помещение 2: <%= sensorstate['sensor.temperature_02'] %> градусов</li>
+            <li>Помещение 3: <%= sensorstate['sensor.temperature_03'] %> градусов</li>
+            <li>Помещение 4: <%= sensorstate['sensor.temperature_04'] %> градусов</li>
+        </ul>
+    </div>
+</div>
+</section>
+    </div>
+</section>
+</body>
+
+</html>
